@@ -1,6 +1,8 @@
 html,body{
     padding: 0;
     margin: 0;
+    background-color: beige;
+
 
 }
  body{
@@ -59,5 +61,35 @@ html,body{
     border: 1px solid #af169b ;
     border-radius: 4px;
     margin: 4px;
+
+}
+
+.animals{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+.animal_card{
+    display: grid;
+    grid-template-columns: 159px 1fr ;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.animal-card-photo{
+    order: 1;
+    grid-row: 1;
+
+}
+
+.animal-card-photo img{
+    width: 115%;
+
+}
+
+.animal-card-text{
+    padding: 10px 25px;
 
 }
