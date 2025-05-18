@@ -33,7 +33,7 @@ html,body{
     left: 0;
     right: 0;
     height: 10px;
-     background: linear-gradient(to right,rgb(88, 4, 197)  ,#542671)
+    background: linear-gradient(to right,rgb(88, 4, 197)  ,#542671)
 }
 .hero h1{
     font-weight: normal;
@@ -51,6 +51,7 @@ html,body{
 .filter-nav{
     display: flex;
     justify-content: center;
+    margin-bottom: 10px; ;
     
 }
 
@@ -81,15 +82,54 @@ html,body{
 .animal-card-photo{
     order: 1;
     grid-row: 1;
+    overflow:hidden;
 
 }
 
 .animal-card-photo img{
+    display: block;
     width: 115%;
+    height:100%;
+    object-fit: cover;
+    transition: transfrom .3s ease-in-out;
 
+}
+
+.animal_card:hover img{
+    transform: rotate(20deg) scale(1.4);
 }
 
 .animal-card-text{
     padding: 10px 25px;
 
+}
+
+.animal-card-text h3{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 1.8rem;
+}
+
+.animal-card-text small{
+    color: rgb(176,176,176)
+}
+
+.animal-card-text p{
+    margin: .8rem 0;
+    padding: 0 ;
+    line-height: 1.5;
+}
+
+.primary_btn{
+    background: linear-gradient(#d147d1,#702acb);
+    padding: 10px;
+    color:aliceblue;
+    border-radius:5px ;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.primary_btn:hover{
+    background: linear-gradient(#e35ea7,#d82eb9) ;
 }
