@@ -73,6 +73,7 @@ html,body{
 
 .animal_card{
     display: grid;
+    margin-bottom:30px ;
     grid-template-columns: 159px 1fr ;
     background-color: white;
     border-radius: 20px;
