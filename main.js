@@ -34,3 +34,20 @@ pets.forEach(pet =>{
 }) 
 
 document.querySelector(".animals").appendChild(warpper)
+
+
+const filterButtons = document.querySelectorAll(".filter-nav a")
+
+filterButtons.forEach(el => {
+  el.addEventListener("click" , e => handleFilterClick(e))
+})
+
+function handleFilterClick(e){
+  let target = e.target
+  
+  e.preventDefault()
+  filterButtons.forEach(el => {
+    el.classList.remove("active")
+  })
+  target.classList.add("active")
+}
