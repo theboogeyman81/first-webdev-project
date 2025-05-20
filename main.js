@@ -20,7 +20,7 @@ pets.forEach(pet =>{
   
   const img = clone.querySelector("img")
   img.src = pet.photo
-  img.alt = `A ${pet.species} named ${pet.name}`
+  img.alt = `A ${pet.species} named ${pet.name}`    
   
   const age = new Date().getFullYear()-pet.birthYear
   const ageText = decideAgeText(age)
@@ -48,6 +48,31 @@ function handleFilterClick(e){
   e.preventDefault()
   filterButtons.forEach(el => {
     el.classList.remove("active")
+    el.style.backgroundColor = "";
+    el.style.color = "";
   })
   target.classList.add("active")
+  target.style.backgroundColor = "purple";
+  target.style.color = "white";
+
+
+  filterPets(target.dataset.filter)
+}
+
+function filterPets(species){
+  const allPets = document.querySelectorAll(".animal_card")
+  if(species == "all"){
+    allPets.forEach(el =>{
+      el.style.display = ""
+    })
+  }else{
+    allPets.forEach(el => {
+      if (el.querySelector(".species").textContent == species){
+        el.style.display = ""
+      }else{
+        el.style.display = "none"
+      }
+    })
+  }
+
 }
